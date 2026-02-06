@@ -3,7 +3,7 @@
         "version": 13,
         "description": "",
         "settings": {
-            "enable_execute_all": true,
+            "enable_execute_all": false,
             "store_external_paths_as_relative": true
         },
         "specifications": {
@@ -1474,7 +1474,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/INES_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1948,7 +1952,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/SpineOpt_target.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -2211,7 +2219,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Final_SpineOpt_Model.sqlite"
+                },
                 "schema": ""
             }
         },
