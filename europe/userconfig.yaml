@@ -1,0 +1,766 @@
+# Configurate your own model
+# countries : ["AL","DE","HU","MK","SE","AT","DK","IE","MT","SI","BA","EE","IT","NL","SK","BE","ES","LT","NO","TR","BG","FI","LU","PL","UA","CH","FR","LV","PT","UK","CY","GR","MD","RO","XK","CZ","HR","ME","RS"]
+
+pipelines:
+  power: True
+  vre: True
+  hydro: True
+  biomass: True
+  electricity_transmission: False
+  residual_demand: True
+  gas: True
+  gas_pipelines: False
+  industry: True
+  heat: True
+  transport: True
+  cargo: False
+
+model:
+    type :  brownfield # greenfied
+    operations_resolution : "1h"
+    planning_resolution : "365D"
+    planning_years: 
+      "2030": ["2030-01-01T00:00:00",10.0]
+      "2040": ["2041-01-01T00:00:00",10.0]
+      "2050": ["2050-01-01T00:00:00",10.0]
+
+timeline:
+  historical_alt : 
+    CY_1995 :
+      start : "1995-01-01T00:00:00"
+      end : "1995-12-31T23:00:00"
+    CY_2008 :
+      start : "2008-01-01T00:00:00"
+      end : "2008-12-31T23:00:00"
+    CY_2009 :
+      start : "2009-01-01T00:00:00"
+      end : "2009-12-31T23:00:00"
+  clustering :
+    activate : True
+    number_clusters : 12
+    number_periods : 24
+
+global_constraints:
+  co2_annual_budget:
+    "2030": 2200000000
+    "2040": 550000000
+    "2050": 0.0
+  co2_annual_sequestration: 200000000
+  renewable_target:
+    "2030": 42.5
+    "2040": 42.5
+    "2050": 42.5  
+
+# Define Europe as country, then, the remaining countries are modeled following requirements
+countries : 
+  ES: 
+    onshore:  "PECD1"
+    offshore: "OFF2"
+
+# Sectors optimized
+commodity: 
+  elec: 
+    status: True
+    node_type: balance
+  CH4: 
+    status: True
+    node_type: balance
+  H2: 
+    status: True
+    node_type: balance
+  CO2: 
+    status: False
+    node_type: storage
+  bio: 
+    status: True
+    node_type: balance
+  HC: 
+    status: True
+    node_type: balance
+  MeOH: 
+    status: True
+    node_type: balance
+  fossil-CH4: 
+    status: False
+    node_type: commodity
+  fossil-HC: 
+    status: False
+    node_type: commodity
+  global-H2: 
+    status: False
+    node_type: commodity
+  crude: 
+    status: False
+    node_type: commodity
+  coal: 
+    status: False
+    node_type: commodity
+  U-92: 
+    status: False
+    node_type: commodity
+  waste: 
+    status: False
+    node_type: commodity
+
+transmission: 
+  elec: 
+    status: True
+  CH4: 
+    status: True
+  H2: 
+    status: True
+  CO2: 
+    status: False
+
+cargo: 
+  MeOH: 
+    status: True
+  HC: 
+    status: True
+  bio: 
+    status: True
+
+storage:
+  large-battery :
+    status: True
+    investment_method : "no_limits"
+  CH4-geo-formation : 
+    status: True 
+    investment_method : "not_allowed"
+  H2-tank : 
+    status: False 
+    investment_method : "no_limits"
+  salt-cavern :
+    status: True 
+    investment_method : "cumulative_limits"
+  CO2-geo-formation :
+    status: False 
+    investment_method : "cumulative_limits"
+  liquids-bunker : 
+    status: False 
+    investment_method : "no_limits"
+  LT-hot-water-tank:
+    status: False 
+    investment_method : "no_limits"
+  heat-storage:
+    status: False
+    investment_method : "no_limits"
+
+
+# Technologies definition
+technology:
+  oil-eng: 
+    rename : "oil-eng"
+    status: True
+    investment_method: "no_limits"
+    renewable : False
+  oil-eng-existing: 
+    rename : "oil-eng-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : False
+  SCPC:
+    rename : "SCPC"
+    status: False
+    investment_method: "not_allowed"
+    renewable : False
+  SCPC-existing:
+    rename : "SCPC-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : False
+  SCPC+CC:
+    rename : "SCPC+CC"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  OCGT:
+    rename : "OCGT"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  OCGT+CC:
+    rename : "OCGT+CC"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  CCGT:
+    rename : "CCGT"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  CCGT-existing:
+    rename : "CCGT-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : False
+  CCGT+CC:
+    rename : "CCGT+CC"
+    status: True
+    investment_method: "no_limits"
+    renewable : False
+  OCGT-H2:
+    rename : "OCGT-H2"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  CCGT-H2:
+    rename : "CCGT-H2"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  wasteST:
+    rename : "wasteST"
+    status: False
+    investment_method: "not_allowed"
+    renewable : False
+  wasteST-existing:
+    rename : "wasteST-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : False
+  bioST:
+    rename : "bioST"
+    status: True
+    investment_method: "no_limits"
+    renewable : True
+  bioST-existing:
+    rename : "bioST-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : True
+  bioST+CC:
+    rename : "bioST+CC"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  geothermal:
+    rename : "geothermal"
+    status: False
+    investment_method: "cumulative_limits"
+    renewable : True
+  nuclear-3:
+    rename : "nuclear-3"
+    status: True
+    investment_method: "no_limits"
+    renewable : False
+  nuclear-3-existing:
+    rename : "nuclear-3-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : False
+  wind-on-existing:
+    rename : "wind-on-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : True
+  wind-off-FB-existing:
+    rename : "wind-off-FB-existing"
+    status: True
+    investment_method: "not_allowed"
+    renewable : True
+  wind-on-SP335-HH100:
+    rename : "wind-on-SP335-HH100"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-on-SP335-HH150:
+    rename : "wind-on-SP335-HH150"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-on-SP277-HH100:
+    rename : "wind-on-SP277-HH100"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-on-SP277-HH150: 
+    rename : "wind-on-SP277-HH150"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-on-SP199-HH100:
+    rename : "wind-on-SP199-HH100"
+    status: True
+    investment_method: "no_limits"
+    renewable : True
+  wind-on-SP199-HH150:
+    rename : "wind-on-SP198-HH150"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-off-FB-SP316-HH155:
+    rename : "wind-off-FB-SP316-HH155"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-off-FB-SP370-HH155:
+    rename : "wind-off-FB-SP370-HH155"
+    status: True
+    investment_method: "no_limits"
+    renewable : True
+  wind-off-FO-SP316-HH155:
+    rename : "wind-off-FO-SP316-HH155"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  wind-off-FO-SP370-HH155:
+    rename : "wind-off-FO-SP370-HH155"
+    status: True
+    investment_method: "no_limits"
+    renewable : True
+  solar-PV-existing:
+    rename : "solar-PV"
+    status: True
+    investment_method: "not_allowed"
+    renewable : True
+  solar-PV-no-tracking:
+    rename : "solar-PV"
+    status: True
+    investment_method: "no_limits"
+    renewable : True
+  solar-PV-rooftop:
+    rename : "solar-PV-rooftop"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  solar-PV-tracking:
+    rename : "solar-PV-tracking"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  solar-CSP:
+    rename : "solar-CSP"
+    status: False
+    investment_method: "no_limits"
+    renewable : True
+  fuelcell:
+    rename : "fuelcell"
+    status: False
+    investment_method: "no_limits"
+    renewable : False
+  hydro-turbine:
+    rename : "hydro-turbine"
+    status: True
+    investment_method: "not_allowed"
+    renewable : True
+  # gas production
+  SMR: 
+    status: True
+    investment_method: "no_limits"
+  SMR+CC:
+    status: True
+    investment_method: "no_limits"
+  PEM: 
+    status: True
+    investment_method: "no_limits"
+  AEC: 
+    status: False
+    investment_method: "no_limits"
+  SOEC: 
+    status: False
+    investment_method: "no_limits"
+  gas-pyrolysis: 
+    status: False
+    investment_method: "no_limits"
+  methanation: 
+    status: True
+    investment_method: "no_limits"
+  bio-diges-up: 
+    status: True
+    investment_method: "no_limits"
+  bio-diges-up+CC: 
+    status: False
+    investment_method: "no_limits"
+  bio-diges-metha: 
+    status: False
+    investment_method: "no_limits"
+  bio-gasif-metha: 
+    status: False
+    investment_method: "no_limits"
+  bio-gasif-metha+CC: 
+    status: False
+    investment_method: "no_limits"
+  DAC: 
+    status: True
+    investment_method: "no_limits"
+  LNG-terminal:
+    status: True
+    investment_method: "not_allowed"
+  gas-extraction: 
+    status: True
+    investment_method: "not_allowed"
+  CH4-import-DZ: 
+    status: True
+    investment_method: "not_allowed"
+  CH4-import-LY: 
+    status: True
+    investment_method: "not_allowed"
+  CH4-import-MA: 
+    status: True
+    investment_method: "not_allowed"
+  CH4-import-BL: 
+    status: True
+    investment_method: "not_allowed"
+  CH4-import-RU: 
+    status: True
+    investment_method: "not_allowed"
+  H2-import-DZ: 
+    status: True
+    investment_method: "not_allowed"
+  LH2-terminal: 
+    status: True
+    investment_method: "not_allowed"
+  # heat sector
+  gas-CHP:
+    status: False
+    investment_method: "not_allowed"
+  coal-CHP:
+    status: False
+    investment_method: "not_allowed"
+  bio-boiler:
+    status: True
+    investment_method: "no_limits"
+  bio-boiler-existing:
+    status: True
+    investment_method: "not_allowed"
+  gas-CHP+CC:
+    status: False
+    investment_method: "not_allowed"
+  oil-boiler:
+    status: True
+    investment_method: "no_limits"
+  oil-boiler-existing:
+    status: True
+    investment_method: "not_allowed"
+  bio-boiler-DH:
+    status: False
+    investment_method: "not_allowed"
+  bio-boiler-DH-existing:
+    status: False
+    investment_method: "not_allowed"
+  fuelcell-CHP:
+    status: False
+    investment_method: "not_allowed"
+  gas-boiler-DH:
+    status: False
+    investment_method: "not_allowed"
+  gas-boiler-DH-existing:
+    status: False
+    investment_method: "not_allowed"
+  heatpump-DH:
+    status: False
+    investment_method: "not_allowed"
+  heatpump-DH-existing:
+    status: False
+    investment_method: "not_allowed"
+  elec-boiler-DH:
+    status: False
+    investment_method: "not_allowed"
+  elec-boiler-DH:
+    status: False
+    investment_method: "not_allowed"
+  coal-CHP+CC:
+    status: False
+    investment_method: "not_allowed"
+  electric-heating:
+    status: True
+    investment_method: "no_limits"
+  electric-heating-existing:
+    status: True
+    investment_method: "not_allowed"
+  solar-DH:
+    status: False
+    investment_method: "not_allowed"
+  solar-DH-existing:
+    status: False
+    investment_method: "not_allowed"
+  air-heatpump-cool:
+    status: True
+    investment_method: "no_limits"
+  air-heatpump:
+    status: True
+    investment_method: "no_limits"
+  air-heatpump-existing:
+    status: True
+    investment_method: "not_allowed"
+  solar-heating:
+    status: False
+    investment_method: "not_allowed"
+  solar-heating-existing:
+    status: False
+    investment_method: "not_allowed"
+  ground-heatpump: 
+    status: True
+    investment_method: "no_limits"
+  ground-heatpump-existing: 
+    status: True
+    investment_method: "not_allowed"
+  gas-boiler:
+    status: True
+    investment_method: "no_limits"
+  gas-boiler-existing:
+    status: True
+    investment_method: "not_allowed"
+  coal-boiler-existing:
+    status: True
+    investment_method: "not_allowed"
+  waste-CHP:
+    status: False
+    investment_method: "not_allowed"
+  bio-boiler-DH+CC:
+    status: False
+    investment_method: "not_allowed"
+  geothermal-DH:
+    status: False
+    investment_method: "not_allowed"
+  geothermal-DH-existing:
+    status: False
+    investment_method: "not_allowed"
+  bio-CHP:
+    status: False
+    investment_method: "not_allowed"
+  bio-CHP+CC:
+    status: False
+    investment_method: "not_allowed"
+  waste-DH-existing:
+    status: False
+    investment_method: "not_allowed"
+  waste-CHP-existing:
+    status: False
+    investment_method: "not_allowed"
+  # industrial routes
+  ((BM)MeOH)O:
+    status: true
+  ((BM+H2)MeOH)O:
+    status: true
+  ((COEL)MeOH)O-MEA:
+    status: true
+  (BM)FT:
+    status: true
+  (BM)MeOH:
+    status: true
+  (BM)NH3:
+    status: true
+  (COEL)FT-MEA:
+    status: true
+  (COEL)MeOH-MEA:
+    status: true
+  (EL):
+    status: true
+  (EL)-CC:
+    status: true
+  (EL)PE:
+    status: true
+  (EL)PEA:
+    status: true
+  (H2):
+    status: true
+  (H2)-CC:
+    status: true
+  (H2)DRI-EAF:
+    status: true
+  (H2)FT-DC:
+    status: true
+  (H2)MeOH-DC:
+    status: true
+  (H2)NH3:
+    status: true
+  (H2)PE:
+    status: true
+  (H2)PEA:
+    status: true
+  (LN)O:
+    status: true
+  (LN)O-MEA:
+    status: true
+  (LN+EL)O:
+    status: true
+  (MeOH)O-MEA:
+    status: true
+  (NG):
+    status: true
+  (NG)-CC:
+    status: true
+  (NG)DRI-EAF:
+    status: true
+  (NG)DRI-EAF-MEA:
+    status: true
+  (NG)NH3:
+    status: true
+  (NG)NH3-DEA:
+    status: true
+  (NG)NH3-MEA-DEA:
+    status: true
+  (NG)NH3-MVR-DEA:
+    status: true
+  (NG)NH3-MVR-MEA-DEA:
+    status: true
+  (NG)PE:
+    status: true
+  (NG)PE-MEA:
+    status: true
+  (NG)PEA:
+    status: true
+  (NG)PEA-MEA:
+    status: true
+  BF-BOF:
+    status: true
+  BF-BOF-MEA:
+    status: true
+  CEM2-(Afm):
+    status: true
+  CEM2-(Afm)CaL:
+    status: true
+  CEM2-(Afm)MEA:
+    status: true
+  CEM2-(Afm)Oxy-CaL:
+    status: true
+  CEM2-(BMW):
+    status: true
+  CEM2-(BMW)CaL:
+    status: true
+  CEM2-(BMW)MEA:
+    status: true
+  CEM2-(BMW)Oxy-CaL:
+    status: true
+  CEM2-(BMW)Oxy-MEA:
+    status: true
+  CEM2-(Coal):
+    status: true
+  CEM2-(Coal)CaL:
+    status: true
+  CEM2-(Coal)Oxy-CaL:
+    status: true
+  EU-mix-2018:
+    status: true
+  LC3-(Afm)CaL:
+    status: true
+  LC3-(Afm)MEA:
+    status: true
+  LC3-(Afm)Oxy-CaL:
+    status: true
+  LC3-(Afm)Oxy-MEA:
+    status: true
+  LC3-(BMW)Oxy-CaL:
+    status: true
+  LC3-(BMW)Oxy-MEA:
+    status: true
+  LC3-(Coal)CaL:
+    status: true
+  LC3-(NG)CaL:
+    status: true
+  LC3-(NG)MEA:
+    status: true
+  LC3-(NG)Oxy-CaL:
+    status: true
+  MOE:
+    status: true
+  REF(H2):
+    status: true
+  REF-SMR:
+    status: true
+  REF-SMR-MEA:
+    status: true
+  Scraps-EAF:
+    status: true
+  WPI-BOF-MEA:
+    status: true
+
+end-use:
+  nonres-cool:
+    status: True
+  res-cool:
+    status: True
+  nonres-space:
+    status: True
+  res-space:
+    status: True
+  nonres-DHW:
+    status: True
+  res-DHW:
+    status: True
+  DH-space:
+    status: False
+  DH-DHW:
+    status: False
+    
+vehicle:
+  car:
+    status: True
+  car-diesel:
+    status: True
+  car-gasoline:
+    status: True
+  car-DR:
+    status: True
+  car-H2:
+    status: True
+  car-CNG:
+    status: True
+  car-LNG:
+    status: True
+  car-LPG:
+    status: True
+  van:
+    status: True
+  van-diesel:
+    status: True
+  van-gasoline:
+    status: True
+  van-DR:
+    status: True
+  van-H2:
+    status: True
+  van-CNG:
+    status: True
+  van-LNG:
+    status: True
+  van-LPG:
+    status: True
+  truck:
+    status: True
+  truck-diesel:
+    status: True
+  truck-gasoline:
+    status: True
+  truck-DR:
+    status: True
+  truck-H2:
+    status: True
+  truck-CNG:
+    status: True
+  truck-LNG:
+    status: True
+  truck-LPG:
+    status: True
+  bus:
+    status: True
+  bus-diesel:
+    status: True
+  bus-gasoline:
+    status: True
+  bus-DR:
+    status: True
+  bus-H2:
+    status: True
+  bus-CNG:
+    status: True
+  bus-LNG:
+    status: True
+  bus-LPG:
+    status: True
+  aviation:
+    status: True
+  int-aviation:
+    status: True
+  maritime:
+    status: True
+  int-maritime:
+    status: True
+  rail:
+    status: True
+  thermal-rail:
+    status: True
+  
+
