@@ -194,13 +194,13 @@
                 }
             },
             {
-                "name": "from Commodity_DB to ines_builder",
+                "name": "from Commodity_DB to INES_builder",
                 "from": [
                     "Commodity_DB",
                     "bottom"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -212,13 +212,13 @@
                 }
             },
             {
-                "name": "from Biomass_DB to ines_builder",
+                "name": "from Biomass_DB to INES_builder",
                 "from": [
                     "Biomass_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -230,13 +230,13 @@
                 }
             },
             {
-                "name": "from VRE_DB to ines_builder",
+                "name": "from VRE_DB to INES_builder",
                 "from": [
                     "VRE_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -248,9 +248,9 @@
                 }
             },
             {
-                "name": "from ines_builder to INES_DB",
+                "name": "from INES_builder to INES_DB",
                 "from": [
-                    "ines_builder",
+                    "INES_builder",
                     "right"
                 ],
                 "to": [
@@ -289,13 +289,13 @@
                 }
             },
             {
-                "name": "from INES_inputs to ines_builder",
+                "name": "from INES_inputs to INES_builder",
                 "from": [
                     "INES_inputs",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "bottom"
                 ],
                 "filter_settings": {
@@ -343,13 +343,13 @@
                 }
             },
             {
-                "name": "from Hydro_DB to ines_builder",
+                "name": "from Hydro_DB to INES_builder",
                 "from": [
                     "Hydro_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -433,13 +433,13 @@
                 }
             },
             {
-                "name": "from Power_DB to ines_builder",
+                "name": "from Power_DB to INES_builder",
                 "from": [
                     "Power_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -451,13 +451,13 @@
                 }
             },
             {
-                "name": "from Transmission_DB to ines_builder",
+                "name": "from Transmission_DB to INES_builder",
                 "from": [
                     "Transmission_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -505,13 +505,13 @@
                 }
             },
             {
-                "name": "from RDemand_DB to ines_builder",
+                "name": "from RDemand_DB to INES_builder",
                 "from": [
                     "RDemand_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -559,13 +559,13 @@
                 }
             },
             {
-                "name": "from Heat_DB to ines_builder",
+                "name": "from Heat_DB to INES_builder",
                 "from": [
                     "Heat_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -613,13 +613,13 @@
                 }
             },
             {
-                "name": "from Industry_DB to ines_builder",
+                "name": "from Industry_DB to INES_builder",
                 "from": [
                     "Industry_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -649,13 +649,13 @@
                 }
             },
             {
-                "name": "from Transport_DB to ines_builder",
+                "name": "from Transport_DB to INES_builder",
                 "from": [
                     "Transport_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -667,9 +667,9 @@
                 }
             },
             {
-                "name": "from ines_to_spinetop to SpineOpt_target",
+                "name": "from ines_to_spineopt to SpineOpt_target",
                 "from": [
-                    "ines_to_spinetop",
+                    "ines_to_spineopt",
                     "right"
                 ],
                 "to": [
@@ -685,13 +685,13 @@
                 }
             },
             {
-                "name": "from INES_DB to ines_to_spinetop",
+                "name": "from INES_DB to ines_to_spineopt",
                 "from": [
                     "INES_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_to_spinetop",
+                    "ines_to_spineopt",
                     "left"
                 ],
                 "filter_settings": {
@@ -739,13 +739,13 @@
                 }
             },
             {
-                "name": "from Gas_DB to ines_builder",
+                "name": "from Gas_DB to INES_builder",
                 "from": [
                     "Gas_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -757,9 +757,9 @@
                 }
             },
             {
-                "name": "from Run_Model_Planning to Investment_Results",
+                "name": "from Run_Investment to Investment_Results",
                 "from": [
-                    "Run_Model_Planning",
+                    "Run_Investment",
                     "right"
                 ],
                 "to": [
@@ -847,13 +847,13 @@
                 }
             },
             {
-                "name": "from Cargo_DB to ines_builder",
+                "name": "from Cargo_DB to INES_builder",
                 "from": [
                     "Cargo_DB",
                     "right"
                 ],
                 "to": [
-                    "ines_builder",
+                    "INES_builder",
                     "left"
                 ],
                 "filter_settings": {
@@ -883,13 +883,13 @@
                 }
             },
             {
-                "name": "from Final_SpineOpt_Model to Run_Model_Planning",
+                "name": "from Final_SpineOpt_Model to Run_Investment",
                 "from": [
                     "Final_SpineOpt_Model",
                     "right"
                 ],
                 "to": [
-                    "Run_Model_Planning",
+                    "Run_Investment",
                     "left"
                 ],
                 "filter_settings": {
@@ -1057,9 +1057,9 @@
                 }
             },
             {
-                "name": "from Operational_Model to Run_Dispatch",
+                "name": "from Dispatch_Model to Run_Dispatch",
                 "from": [
-                    "Operational_Model",
+                    "Dispatch_Model",
                     "right"
                 ],
                 "to": [
@@ -1093,13 +1093,13 @@
                 }
             },
             {
-                "name": "from fix_investments to Operational_Model",
+                "name": "from fix_investments to Dispatch_Model",
                 "from": [
                     "fix_investments",
                     "right"
                 ],
                 "to": [
-                    "Operational_Model",
+                    "Dispatch_Model",
                     "left"
                 ],
                 "filter_settings": {
@@ -1219,13 +1219,13 @@
                 }
             },
             {
-                "name": "from merge_operations to Operational_Model",
+                "name": "from merge_operations to Dispatch_Model",
                 "from": [
                     "merge_operations",
                     "right"
                 ],
                 "to": [
-                    "Operational_Model",
+                    "Dispatch_Model",
                     "left"
                 ],
                 "options": {
@@ -1359,7 +1359,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/VRE_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1440,7 +1444,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Biomass_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1456,74 +1464,6 @@
                 "database": "",
                 "schema": ""
             }
-        },
-        "ines_builder": {
-            "type": "Tool",
-            "description": "",
-            "x": 111.03809759610272,
-            "y": -16.826264543962566,
-            "specification": "ines_builder",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@INES_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Commodity_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Power_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@VRE_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Transmission_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Hydro_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@RDemand_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Industry_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Biomass_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Gas_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Transport_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Heat_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Cargo_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/userconfig.yaml"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
         },
         "INES_DB": {
             "type": "Data Store",
@@ -1617,7 +1557,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Hydro_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1630,7 +1574,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Transmission_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1733,7 +1681,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Power_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1841,7 +1793,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Heat_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1894,7 +1850,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Industry_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1943,7 +1903,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Transport_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1973,26 +1937,6 @@
                 }
             ],
             "kill_completed_processes": false,
-            "log_process_output": false
-        },
-        "ines_to_spinetop": {
-            "type": "Tool",
-            "description": "",
-            "x": 404.71402770228985,
-            "y": -19.15407650425766,
-            "specification": "ines_to_spinetop",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@INES_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@SpineOpt_target"
-                }
-            ],
-            "kill_completed_processes": true,
             "log_process_output": false
         },
         "SpineOpt_target": {
@@ -2033,7 +1977,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Gas_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -2077,26 +2025,6 @@
                 {
                     "type": "resource",
                     "arg": "<project>/data-pipelines/europe/EU_historical_inflation_ECB.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
-        "Run_Model_Planning": {
-            "type": "Tool",
-            "description": "",
-            "x": 935.89753794699,
-            "y": -33.192817045404674,
-            "specification": "",
-            "execute_in_work": true,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Final_SpineOpt_Model"
-                },
-                {
-                    "type": "resource",
-                    "arg": "db_url@Investment_Results"
                 }
             ],
             "kill_completed_processes": false,
@@ -2232,7 +2160,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Cargo_DB.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -2275,19 +2207,6 @@
             "description": "",
             "x": 798.2870027613853,
             "y": -26.868592629135087,
-            "url": {
-                "dialect": "sqlite",
-                "host": "",
-                "port": null,
-                "database": "",
-                "schema": ""
-            }
-        },
-        "Operational_Model": {
-            "type": "Data Store",
-            "description": "",
-            "x": 1317.405246783209,
-            "y": -33.51155955394563,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -2423,6 +2342,127 @@
                 {
                     "type": "resource",
                     "arg": "<project>/data-pipelines/europe/_spineopt-up/scenario_config.yml"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "ines_to_spineopt": {
+            "type": "Tool",
+            "description": "",
+            "x": 404.71402770228985,
+            "y": -19.15407650425766,
+            "specification": "ines_to_spinetop",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@INES_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@SpineOpt_target"
+                }
+            ],
+            "kill_completed_processes": true,
+            "log_process_output": false
+        },
+        "Dispatch_Model": {
+            "type": "Data Store",
+            "description": "",
+            "x": 1317.405246783209,
+            "y": -33.51155955394563,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "Run_Investment": {
+            "type": "Tool",
+            "description": "",
+            "x": 935.89753794699,
+            "y": -33.192817045404674,
+            "specification": "",
+            "execute_in_work": true,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Final_SpineOpt_Model"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Investment_Results"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "INES_builder": {
+            "type": "Tool",
+            "description": "",
+            "x": 111.03809759610272,
+            "y": -16.826264543962566,
+            "specification": "ines_builder",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@INES_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Commodity_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Power_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@VRE_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transmission_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Hydro_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@RDemand_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Industry_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Biomass_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Gas_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transport_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Heat_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Cargo_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/userconfig.yaml"
                 }
             ],
             "kill_completed_processes": false,
