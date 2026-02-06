@@ -1,0 +1,13 @@
+{
+    "name": "planning_feedback",
+    "tooltype": "python",
+    "includes": [
+        "planning_feedback.py"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "includes_main_path": "../../../optimization_setup"
+}

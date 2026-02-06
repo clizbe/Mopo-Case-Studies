@@ -1,0 +1,13 @@
+{
+    "name": "gas_import",
+    "tooltype": "python",
+    "includes": [
+        "gas_import.py"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "includes_main_path": "../../../data-pipelines/europe/_gas"
+}

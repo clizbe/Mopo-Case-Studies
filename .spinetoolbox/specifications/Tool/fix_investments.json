@@ -1,0 +1,13 @@
+{
+    "name": "fix_investments",
+    "tooltype": "python",
+    "includes": [
+        "fix_investments.py"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "includes_main_path": "../../../data-pipelines/europe/_spineopt-up"
+}

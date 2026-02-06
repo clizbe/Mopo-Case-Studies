@@ -1,0 +1,2432 @@
+{
+    "project": {
+        "version": 13,
+        "description": "",
+        "settings": {
+            "enable_execute_all": true,
+            "store_external_paths_as_relative": true
+        },
+        "specifications": {
+            "Tool": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/vre_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/biomass_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/ines_builder.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/hydro_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/transmission_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/power_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/rdemand_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/heat_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/industry_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/transport_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/ines_to_spinetop.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/gas_import.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/clustering_input.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/run_clustering.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/opt_setup.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/planning_feedback.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/visualization.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/cargo_importer.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/fix_investments.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/clustering_output.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/scenario_setup.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/feedback_extremes.json"
+                }
+            ]
+        },
+        "connections": [
+            {
+                "name": "from VRE_importer to VRE_DB",
+                "from": [
+                    "VRE_importer",
+                    "right"
+                ],
+                "to": [
+                    "VRE_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from VRE_input to VRE_importer",
+                "from": [
+                    "VRE_input",
+                    "right"
+                ],
+                "to": [
+                    "VRE_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from biomass_input to biomass_importer",
+                "from": [
+                    "biomass_input",
+                    "right"
+                ],
+                "to": [
+                    "biomass_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from biomass_importer to Biomass_DB",
+                "from": [
+                    "biomass_importer",
+                    "right"
+                ],
+                "to": [
+                    "Biomass_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Commodity_DB to ines_builder",
+                "from": [
+                    "Commodity_DB",
+                    "bottom"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Biomass_DB to ines_builder",
+                "from": [
+                    "Biomass_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from VRE_DB to ines_builder",
+                "from": [
+                    "VRE_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from ines_builder to INES_DB",
+                "from": [
+                    "ines_builder",
+                    "right"
+                ],
+                "to": [
+                    "INES_DB",
+                    "left"
+                ],
+                "options": {
+                    "purge_before_writing": true,
+                    "purge_settings": {
+                        "alternative": true,
+                        "scenario": true,
+                        "scenario_alternative": true,
+                        "entity_class": true,
+                        "display_mode": true,
+                        "entity_class_display_mode": true,
+                        "superclass_subclass": true,
+                        "entity": true,
+                        "entity_group": true,
+                        "entity_alternative": true,
+                        "parameter_value_list": true,
+                        "list_value": true,
+                        "parameter_definition": true,
+                        "parameter_type": true,
+                        "parameter_value": true,
+                        "metadata": true,
+                        "entity_metadata": true,
+                        "parameter_value_metadata": true
+                    }
+                },
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from INES_inputs to ines_builder",
+                "from": [
+                    "INES_inputs",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "bottom"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from hydro_importer to Hydro_DB",
+                "from": [
+                    "hydro_importer",
+                    "right"
+                ],
+                "to": [
+                    "Hydro_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from hydro_input to hydro_importer",
+                "from": [
+                    "hydro_input",
+                    "right"
+                ],
+                "to": [
+                    "hydro_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Hydro_DB to ines_builder",
+                "from": [
+                    "Hydro_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from transmission_importer to Transmission_DB",
+                "from": [
+                    "transmission_importer",
+                    "right"
+                ],
+                "to": [
+                    "Transmission_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from transmission_input to transmission_importer",
+                "from": [
+                    "transmission_input",
+                    "right"
+                ],
+                "to": [
+                    "transmission_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from power_input to power_importer",
+                "from": [
+                    "power_input",
+                    "right"
+                ],
+                "to": [
+                    "power_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from power_importer to Power_DB",
+                "from": [
+                    "power_importer",
+                    "right"
+                ],
+                "to": [
+                    "Power_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Power_DB to ines_builder",
+                "from": [
+                    "Power_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Transmission_DB to ines_builder",
+                "from": [
+                    "Transmission_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from rdemand_input to rdemand_importer",
+                "from": [
+                    "rdemand_input",
+                    "right"
+                ],
+                "to": [
+                    "rdemand_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from rdemand_importer to RDemand_DB",
+                "from": [
+                    "rdemand_importer",
+                    "right"
+                ],
+                "to": [
+                    "RDemand_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from RDemand_DB to ines_builder",
+                "from": [
+                    "RDemand_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from heat_input to heat_importer",
+                "from": [
+                    "heat_input",
+                    "right"
+                ],
+                "to": [
+                    "heat_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from heat_importer to Heat_DB",
+                "from": [
+                    "heat_importer",
+                    "right"
+                ],
+                "to": [
+                    "Heat_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Heat_DB to ines_builder",
+                "from": [
+                    "Heat_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from industry_input to industry_importer",
+                "from": [
+                    "industry_input",
+                    "right"
+                ],
+                "to": [
+                    "industry_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from industry_importer to Industry_DB",
+                "from": [
+                    "industry_importer",
+                    "right"
+                ],
+                "to": [
+                    "Industry_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Industry_DB to ines_builder",
+                "from": [
+                    "Industry_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from transport_importer to Transport_DB",
+                "from": [
+                    "transport_importer",
+                    "right"
+                ],
+                "to": [
+                    "Transport_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Transport_DB to ines_builder",
+                "from": [
+                    "Transport_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from ines_to_spinetop to SpineOpt_target",
+                "from": [
+                    "ines_to_spinetop",
+                    "right"
+                ],
+                "to": [
+                    "SpineOpt_target",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from INES_DB to ines_to_spinetop",
+                "from": [
+                    "INES_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_to_spinetop",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from gas_input to gas_import",
+                "from": [
+                    "gas_input",
+                    "right"
+                ],
+                "to": [
+                    "gas_import",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from gas_import to Gas_DB",
+                "from": [
+                    "gas_import",
+                    "right"
+                ],
+                "to": [
+                    "Gas_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Gas_DB to ines_builder",
+                "from": [
+                    "Gas_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Run_Model_Planning to Investment_Results",
+                "from": [
+                    "Run_Model_Planning",
+                    "right"
+                ],
+                "to": [
+                    "Investment_Results",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from clustering_input to run_clustering",
+                "from": [
+                    "clustering_input",
+                    "right"
+                ],
+                "to": [
+                    "run_clustering",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Investment_Results to visualization",
+                "from": [
+                    "Investment_Results",
+                    "right"
+                ],
+                "to": [
+                    "visualization",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from cargo_input to cargo_import",
+                "from": [
+                    "cargo_input",
+                    "right"
+                ],
+                "to": [
+                    "cargo_import",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from cargo_import to Cargo_DB",
+                "from": [
+                    "cargo_import",
+                    "right"
+                ],
+                "to": [
+                    "Cargo_DB",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Cargo_DB to ines_builder",
+                "from": [
+                    "Cargo_DB",
+                    "right"
+                ],
+                "to": [
+                    "ines_builder",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from transport_input to transport_importer",
+                "from": [
+                    "transport_input",
+                    "right"
+                ],
+                "to": [
+                    "transport_importer",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Final_SpineOpt_Model to Run_Model_Planning",
+                "from": [
+                    "Final_SpineOpt_Model",
+                    "right"
+                ],
+                "to": [
+                    "Run_Model_Planning",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from merge_spineopt to Final_SpineOpt_Model",
+                "from": [
+                    "merge_spineopt",
+                    "right"
+                ],
+                "to": [
+                    "Final_SpineOpt_Model",
+                    "left"
+                ],
+                "options": {
+                    "purge_before_writing": true,
+                    "purge_settings": {
+                        "alternative": true,
+                        "scenario": true,
+                        "scenario_alternative": true,
+                        "entity_class": true,
+                        "display_mode": true,
+                        "entity_class_display_mode": true,
+                        "superclass_subclass": true,
+                        "entity": true,
+                        "entity_group": true,
+                        "entity_alternative": true,
+                        "parameter_value_list": true,
+                        "list_value": true,
+                        "parameter_definition": true,
+                        "parameter_type": true,
+                        "parameter_value": true,
+                        "metadata": true,
+                        "entity_metadata": true,
+                        "parameter_value_metadata": true,
+                        "entity_location": true
+                    }
+                },
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from SpineOpt_target to merge_spineopt",
+                "from": [
+                    "SpineOpt_target",
+                    "right"
+                ],
+                "to": [
+                    "merge_spineopt",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Final_SpineOpt_Model to visualization",
+                "from": [
+                    "Final_SpineOpt_Model",
+                    "bottom"
+                ],
+                "to": [
+                    "visualization",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from clustering_input to Final_SpineOpt_Model",
+                "from": [
+                    "clustering_input",
+                    "left"
+                ],
+                "to": [
+                    "Final_SpineOpt_Model",
+                    "bottom"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from opt_setup to SpineOpt_target",
+                "from": [
+                    "opt_setup",
+                    "right"
+                ],
+                "to": [
+                    "SpineOpt_target",
+                    "bottom"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from template_1 to SpineOpt_target",
+                "from": [
+                    "template_1",
+                    "bottom"
+                ],
+                "to": [
+                    "SpineOpt_target",
+                    "left"
+                ],
+                "options": {
+                    "purge_before_writing": true,
+                    "purge_settings": {
+                        "alternative": true,
+                        "scenario": true,
+                        "scenario_alternative": true,
+                        "entity_class": true,
+                        "display_mode": true,
+                        "entity_class_display_mode": true,
+                        "superclass_subclass": true,
+                        "entity": true,
+                        "entity_group": true,
+                        "entity_alternative": true,
+                        "parameter_value_list": true,
+                        "list_value": true,
+                        "parameter_definition": true,
+                        "parameter_type": true,
+                        "parameter_value": true,
+                        "metadata": true,
+                        "entity_metadata": true,
+                        "parameter_value_metadata": true,
+                        "entity_location": true
+                    }
+                },
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Operational_Model to Run_Dispatch",
+                "from": [
+                    "Operational_Model",
+                    "right"
+                ],
+                "to": [
+                    "Run_Dispatch",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Run_Dispatch to Dispatch_Results",
+                "from": [
+                    "Run_Dispatch",
+                    "right"
+                ],
+                "to": [
+                    "Dispatch_Results",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from fix_investments to Operational_Model",
+                "from": [
+                    "fix_investments",
+                    "right"
+                ],
+                "to": [
+                    "Operational_Model",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from run_clustering to clustering_output",
+                "from": [
+                    "run_clustering",
+                    "right"
+                ],
+                "to": [
+                    "clustering_output",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from clustering_output to Final_SpineOpt_Model",
+                "from": [
+                    "clustering_output",
+                    "right"
+                ],
+                "to": [
+                    "Final_SpineOpt_Model",
+                    "bottom"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from scenario_config to scenario_setup",
+                "from": [
+                    "scenario_config",
+                    "right"
+                ],
+                "to": [
+                    "scenario_setup",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from scenario_setup to Final_SpineOpt_Model",
+                "from": [
+                    "scenario_setup",
+                    "right"
+                ],
+                "to": [
+                    "Final_SpineOpt_Model",
+                    "bottom"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Investment_Results to fix_investments",
+                "from": [
+                    "Investment_Results",
+                    "right"
+                ],
+                "to": [
+                    "fix_investments",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Final_SpineOpt_Model to merge_operations",
+                "from": [
+                    "Final_SpineOpt_Model",
+                    "right"
+                ],
+                "to": [
+                    "merge_operations",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from merge_operations to Operational_Model",
+                "from": [
+                    "merge_operations",
+                    "right"
+                ],
+                "to": [
+                    "Operational_Model",
+                    "left"
+                ],
+                "options": {
+                    "purge_before_writing": true,
+                    "purge_settings": {
+                        "alternative": true,
+                        "scenario": true,
+                        "scenario_alternative": true,
+                        "entity_class": false,
+                        "display_mode": false,
+                        "entity_class_display_mode": false,
+                        "superclass_subclass": false,
+                        "entity": true,
+                        "entity_group": true,
+                        "entity_alternative": true,
+                        "parameter_value_list": false,
+                        "list_value": false,
+                        "parameter_definition": false,
+                        "parameter_type": false,
+                        "parameter_value": true,
+                        "metadata": true,
+                        "entity_metadata": true,
+                        "parameter_value_metadata": true,
+                        "entity_location": true
+                    }
+                },
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from Dispatch_Results to feedback_extremes",
+                "from": [
+                    "Dispatch_Results",
+                    "bottom"
+                ],
+                "to": [
+                    "feedback_extremes",
+                    "right"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from run_clustering to feedback_extremes",
+                "from": [
+                    "run_clustering",
+                    "bottom"
+                ],
+                "to": [
+                    "feedback_extremes",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from scenario_config to feedback_extremes",
+                "from": [
+                    "scenario_config",
+                    "bottom"
+                ],
+                "to": [
+                    "feedback_extremes",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            }
+        ],
+        "jumps": []
+    },
+    "items": {
+        "VRE_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -539.3855564141572,
+            "y": 245.96123103934667,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/VRE/VRE_costs_EUR2025/VRE_costs.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/VRE/VRE_time_series"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/VRE/VRE_installed_capacities_2020_and_2025"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/VRE/VRE_greenfield_installation_potentials"
+                }
+            ],
+            "db_references": []
+        },
+        "VRE_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -256.55233599861987,
+            "y": 247.31833102982944,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "VRE_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -396.9659915240641,
+            "y": 252.90473964234604,
+            "specification": "VRE_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@VRE_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_costs_EUR2025/VRE_costs.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_time_series"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_installed_capacities_2020_and_2025"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_greenfield_installation_potentials"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "biomass_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -558.700790454013,
+            "y": -123.50482396959805,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_biomass/db_biomass_ener_mopo.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "biomass_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -410.4890129378094,
+            "y": -130.41934029018293,
+            "specification": "biomass_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Biomass_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_biomass/db_biomass_ener_mopo.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Biomass_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -269.05078061828937,
+            "y": -132.24031061470512,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "Commodity_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": 17.038601498274446,
+            "y": -263.13462810950466,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "ines_builder": {
+            "type": "Tool",
+            "description": "",
+            "x": 111.03809759610272,
+            "y": -16.826264543962566,
+            "specification": "ines_builder",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@INES_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Commodity_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Power_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@VRE_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transmission_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Hydro_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@RDemand_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Industry_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Biomass_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Gas_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transport_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Heat_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Cargo_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/userconfig.yaml"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "INES_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": 256.7317705650375,
+            "y": -16.207897629392,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "INES_inputs": {
+            "type": "Data Connection",
+            "description": "",
+            "x": 42.93488088184628,
+            "y": 277.88005380134354,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/userconfig.yaml"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "hydro_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -560.8701192305871,
+            "y": -406.13066454712214,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_hydro/hydro_parameters.xlsx"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_hydro/inflow_reservoir.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_hydro/run-of-river_generation.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "hydro_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -426.88727704360696,
+            "y": -411.8977251794212,
+            "specification": "hydro_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Hydro_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_hydro/hydro_parameters.xlsx"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_hydro/run-of-river_generation.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_hydro/inflow_reservoir.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Hydro_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -288.0616939169543,
+            "y": -412.2990594952122,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "Transmission_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -269.87221679122587,
+            "y": -215.31450490903728,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "transmission_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -561.9094590606735,
+            "y": -214.6448485447834,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_transmission/Electricity_Transmission.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "transmission_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -414.05082644781834,
+            "y": -217.00266092727077,
+            "specification": "transmission_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transmission_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_transmission/Electricity_Transmission.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "power_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -562.5422181227827,
+            "y": -318.11777770009655,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_power/light_tech_catalogue.xlsx"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_power/existing_units_PECD1.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_power/existing_parameters.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "power_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -418.642671382615,
+            "y": -318.62493019449937,
+            "specification": "power_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Power_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_power/existing_units_PECD1.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_power/light_tech_catalogue.xlsx"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_power/existing_parameters.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Power_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -282.53422506558996,
+            "y": -335.33958085701,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "RDemand_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -296.37139157456573,
+            "y": -511.57623416623494,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/RDemand_DB.sqlite"
+                },
+                "schema": ""
+            }
+        },
+        "rdemand_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -427.1444937446486,
+            "y": -509.61113357776105,
+            "specification": "rdemand_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@RDemand_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Rdemand/other_electricity_demand.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "rdemand_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -553.9504919571082,
+            "y": -511.0693397852182,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Rdemand/other_electricity_demand.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "heat_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -540.7254739366476,
+            "y": 335.03017975795683,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Buildings/heat_storage_params.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Buildings/heat_technology_params.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Buildings/simplified_capacities_with_decommissioning_MW.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Buildings/scenario_total_yearly_demands_GWh.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Buildings/cop-timeseries"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Buildings/demand-timeseries"
+                }
+            ],
+            "db_references": []
+        },
+        "Heat_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -255.5938905324644,
+            "y": 339.9903272375267,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "heat_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -399.84837895008167,
+            "y": 340.8128462447793,
+            "specification": "heat_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Heat_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/heat_technology_params.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/heat_storage_params.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/simplified_capacities_with_decommissioning_MW.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/scenario_total_yearly_demands_GWh.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/cop-timeseries"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/demand-timeseries"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Industry_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -255.3807789250465,
+            "y": 439.61853942733967,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "industry_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -397.1414948503944,
+            "y": 441.76060880047487,
+            "specification": "industry_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Industry_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_industry-aidres/technology_catalogue_ind_nuts1_nuts3.xlsx"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "industry_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -539.6555499163007,
+            "y": 440.3975010035052,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_industry-aidres/technology_catalogue_ind_nuts1_nuts3.xlsx"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "Transport_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -268.8088058078154,
+            "y": -36.48766369829292,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "transport_importer": {
+            "type": "Tool",
+            "description": "",
+            "x": -410.63335445374133,
+            "y": -32.350775495575874,
+            "specification": "transport_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transport_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Transport/road"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Transport/non-road"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Transport/fleets_per_scenario.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "ines_to_spinetop": {
+            "type": "Tool",
+            "description": "",
+            "x": 404.71402770228985,
+            "y": -19.15407650425766,
+            "specification": "ines_to_spinetop",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@INES_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@SpineOpt_target"
+                }
+            ],
+            "kill_completed_processes": true,
+            "log_process_output": false
+        },
+        "SpineOpt_target": {
+            "type": "Data Store",
+            "description": "",
+            "x": 555.1060605974643,
+            "y": -26.085437722294493,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "template_1": {
+            "type": "Tool",
+            "description": "",
+            "x": 443.65587154602207,
+            "y": -161.4625275834705,
+            "specification": "",
+            "execute_in_work": true,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@SpineOpt_target"
+                }
+            ],
+            "kill_completed_processes": true,
+            "log_process_output": false
+        },
+        "Gas_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -261.58128759648304,
+            "y": 59.195825586759156,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "gas_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -544.2325039251209,
+            "y": 61.81027087345382,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/EU_historical_inflation_ECB.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_gas/Gas_Sectors_Dataset.xlsx"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "gas_import": {
+            "type": "Tool",
+            "description": "",
+            "x": -417.06154271449014,
+            "y": 58.919562263123794,
+            "specification": "gas_import",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Gas_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_gas/Gas_Sectors_Dataset.xlsx"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/EU_historical_inflation_ECB.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Run_Model_Planning": {
+            "type": "Tool",
+            "description": "",
+            "x": 935.89753794699,
+            "y": -33.192817045404674,
+            "specification": "",
+            "execute_in_work": true,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Final_SpineOpt_Model"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Investment_Results"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Investment_Results": {
+            "type": "Data Store",
+            "description": "",
+            "x": 1063.9066024028607,
+            "y": -32.09661519265896,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "clustering_input": {
+            "type": "Tool",
+            "description": "",
+            "x": 854.0548516451297,
+            "y": 192.1277011749459,
+            "specification": "clustering_input",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Final_SpineOpt_Model"
+                }
+            ],
+            "kill_completed_processes": true,
+            "log_process_output": false
+        },
+        "run_clustering": {
+            "type": "Tool",
+            "description": "",
+            "x": 964.8626890714743,
+            "y": 189.59348920488065,
+            "specification": "run_clustering",
+            "execute_in_work": false,
+            "cmd_line_args": [],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "opt_setup": {
+            "type": "Tool",
+            "description": "",
+            "x": 421.00241228134985,
+            "y": 111.80496697234571,
+            "specification": "opt_setup",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@SpineOpt_target"
+                }
+            ],
+            "kill_completed_processes": true,
+            "log_process_output": false
+        },
+        "visualization": {
+            "type": "Tool",
+            "description": "",
+            "x": 1187.130006913403,
+            "y": 79.92750081012574,
+            "specification": "visualization",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Investment_Results"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Final_SpineOpt_Model"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "cargo_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -544.255586720617,
+            "y": 161.11644697246237,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_cargo-transport/cargo_network.csv"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_cargo-transport/cargo_config.yml"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "cargo_import": {
+            "type": "Tool",
+            "description": "",
+            "x": -415.6916565849181,
+            "y": 156.85790405687897,
+            "specification": "cargo_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Cargo_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_cargo-transport/cargo_network.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_cargo-transport/cargo_config.yml"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Cargo_DB": {
+            "type": "Data Store",
+            "description": "",
+            "x": -257.77746795487116,
+            "y": 153.5605700147006,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "transport_input": {
+            "type": "Data Connection",
+            "description": "",
+            "x": -548.8317799335045,
+            "y": -31.67222758372185,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Transport/fleets_per_scenario.csv"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Transport/road"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Transport/non-road"
+                }
+            ],
+            "db_references": []
+        },
+        "merge_spineopt": {
+            "type": "Merger",
+            "description": "",
+            "x": 671.5273030357471,
+            "y": -21.288575843674735,
+            "cancel_on_error": false
+        },
+        "Final_SpineOpt_Model": {
+            "type": "Data Store",
+            "description": "",
+            "x": 798.2870027613853,
+            "y": -26.868592629135087,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "Operational_Model": {
+            "type": "Data Store",
+            "description": "",
+            "x": 1317.405246783209,
+            "y": -33.51155955394563,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "Run_Dispatch": {
+            "type": "Tool",
+            "description": "",
+            "x": 1434.1589773136573,
+            "y": -35.22989109232455,
+            "specification": "",
+            "execute_in_work": true,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Operational_Model"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Dispatch_Results"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Dispatch_Results": {
+            "type": "Data Store",
+            "description": "",
+            "x": 1558.0382221504524,
+            "y": -37.11523567787842,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "fix_investments": {
+            "type": "Tool",
+            "description": "",
+            "x": 1189.3123921254125,
+            "y": -33.70148284289323,
+            "specification": "fix_investments",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Investment_Results"
+                },
+                {
+                    "type": "resource",
+                    "arg": "db_url@Operational_Model"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "clustering_output": {
+            "type": "Tool",
+            "description": "",
+            "x": 1082.130768164407,
+            "y": 187.45842916709893,
+            "specification": "clustering_output",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Final_SpineOpt_Model"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "scenario_config": {
+            "type": "Data Connection",
+            "description": "",
+            "x": 537.2020453324313,
+            "y": 235.2084520778817,
+            "file_references": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "data-pipelines/europe/_spineopt-up/scenario_config.yml"
+                }
+            ],
+            "file_patterns": [],
+            "directory_references": [],
+            "db_references": []
+        },
+        "scenario_setup": {
+            "type": "Tool",
+            "description": "",
+            "x": 653.214757823477,
+            "y": 237.18740827495668,
+            "specification": "scenario_setup",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Final_SpineOpt_Model"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_spineopt-up/scenario_config.yml"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "merge_operations": {
+            "type": "Merger",
+            "description": "",
+            "x": 1058.9160080752054,
+            "y": -177.95362525098557,
+            "cancel_on_error": false
+        },
+        "feedback_extremes": {
+            "type": "Tool",
+            "description": "",
+            "x": 1507.232646835013,
+            "y": 297.51953419554354,
+            "specification": "feedback_extremes",
+            "execute_in_work": true,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Dispatch_Results"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_spineopt-up/scenario_config.yml"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        }
+    }
+}

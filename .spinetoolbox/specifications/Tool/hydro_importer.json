@@ -1,0 +1,13 @@
+{
+    "name": "hydro_importer",
+    "tooltype": "python",
+    "includes": [
+        "hydro_DB.py"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "includes_main_path": "../../../data-pipelines/europe/_hydro"
+}

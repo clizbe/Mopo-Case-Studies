@@ -1,0 +1,13 @@
+{
+    "name": "industry_importer",
+    "tooltype": "python",
+    "includes": [
+        "industry_DB.py"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "includes_main_path": "../../../data-pipelines/europe/_industry-aidres"
+}

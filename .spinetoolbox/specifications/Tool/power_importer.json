@@ -1,0 +1,13 @@
+{
+    "name": "power_importer",
+    "tooltype": "python",
+    "includes": [
+        "power_DB.py"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "includes_main_path": "../../../data-pipelines/europe/_power"
+}
