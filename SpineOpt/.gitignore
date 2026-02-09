@@ -1,0 +1,44 @@
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.gz
+*.toc
+*.sqlite-journal
+*test.sqlite
+*test_out.sqlite
+
+docs/build/
+docs/site/
+/process-palette.json
+
+model\.so_model
+
+*.pdf
+
+*.png
+
+*.so_model
+
+*.csv
+
+SpineOptApp
+
+docs/src/concept_reference/Object Classes.md
+docs/src/concept_reference/Relationship Classes.md
+docs/src/concept_reference/Parameters.md
+docs/src/concept_reference/Parameter Value Lists.md
+docs/src/mathematical_formulation/constraints_automatically_generated.md
+docs/src/mathematical_formulation/sets.md
+docs/src/mathematical_formulation/variables.md
+test/Manifest.toml
+Manifest.toml
+
+.vscode/
+debugging/
+deleteme.sqlite
