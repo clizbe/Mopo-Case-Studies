@@ -122,9 +122,9 @@
         },
         "connections": [
             {
-                "name": "from VRE_importer to VRE_DB",
+                "name": "from VRE_tool to VRE_DB",
                 "from": [
-                    "VRE_importer",
+                    "VRE_tool",
                     "right"
                 ],
                 "to": [
@@ -140,13 +140,13 @@
                 }
             },
             {
-                "name": "from VRE_input to VRE_importer",
+                "name": "from VRE_input to VRE_tool",
                 "from": [
                     "VRE_input",
                     "right"
                 ],
                 "to": [
-                    "VRE_importer",
+                    "VRE_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -158,13 +158,13 @@
                 }
             },
             {
-                "name": "from biomass_input to biomass_importer",
+                "name": "from biomass_input to biomass_tool",
                 "from": [
                     "biomass_input",
                     "right"
                 ],
                 "to": [
-                    "biomass_importer",
+                    "biomass_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -176,9 +176,9 @@
                 }
             },
             {
-                "name": "from biomass_importer to Biomass_DB",
+                "name": "from biomass_tool to Biomass_DB",
                 "from": [
-                    "biomass_importer",
+                    "biomass_tool",
                     "right"
                 ],
                 "to": [
@@ -307,9 +307,9 @@
                 }
             },
             {
-                "name": "from hydro_importer to Hydro_DB",
+                "name": "from hydro_tool to Hydro_DB",
                 "from": [
-                    "hydro_importer",
+                    "hydro_tool",
                     "right"
                 ],
                 "to": [
@@ -325,13 +325,13 @@
                 }
             },
             {
-                "name": "from hydro_input to hydro_importer",
+                "name": "from hydro_input to hydro_tool",
                 "from": [
                     "hydro_input",
                     "right"
                 ],
                 "to": [
-                    "hydro_importer",
+                    "hydro_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -361,9 +361,9 @@
                 }
             },
             {
-                "name": "from transmission_importer to Transmission_DB",
+                "name": "from transmission_tool to Transmission_DB",
                 "from": [
-                    "transmission_importer",
+                    "transmission_tool",
                     "right"
                 ],
                 "to": [
@@ -379,13 +379,13 @@
                 }
             },
             {
-                "name": "from transmission_input to transmission_importer",
+                "name": "from transmission_input to transmission_tool",
                 "from": [
                     "transmission_input",
                     "right"
                 ],
                 "to": [
-                    "transmission_importer",
+                    "transmission_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -397,13 +397,13 @@
                 }
             },
             {
-                "name": "from power_input to power_importer",
+                "name": "from power_input to power_tool",
                 "from": [
                     "power_input",
                     "right"
                 ],
                 "to": [
-                    "power_importer",
+                    "power_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -415,9 +415,9 @@
                 }
             },
             {
-                "name": "from power_importer to Power_DB",
+                "name": "from power_tool to Power_DB",
                 "from": [
-                    "power_importer",
+                    "power_tool",
                     "right"
                 ],
                 "to": [
@@ -469,13 +469,13 @@
                 }
             },
             {
-                "name": "from rdemand_input to rdemand_importer",
+                "name": "from rdemand_input to rdemand_tool",
                 "from": [
                     "rdemand_input",
                     "right"
                 ],
                 "to": [
-                    "rdemand_importer",
+                    "rdemand_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -487,9 +487,9 @@
                 }
             },
             {
-                "name": "from rdemand_importer to RDemand_DB",
+                "name": "from rdemand_tool to RDemand_DB",
                 "from": [
-                    "rdemand_importer",
+                    "rdemand_tool",
                     "right"
                 ],
                 "to": [
@@ -523,13 +523,13 @@
                 }
             },
             {
-                "name": "from heat_input to heat_importer",
+                "name": "from heat_input to heat_tool",
                 "from": [
                     "heat_input",
                     "right"
                 ],
                 "to": [
-                    "heat_importer",
+                    "heat_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -541,9 +541,9 @@
                 }
             },
             {
-                "name": "from heat_importer to Heat_DB",
+                "name": "from heat_tool to Heat_DB",
                 "from": [
-                    "heat_importer",
+                    "heat_tool",
                     "right"
                 ],
                 "to": [
@@ -577,13 +577,13 @@
                 }
             },
             {
-                "name": "from industry_input to industry_importer",
+                "name": "from industry_input to industry_tool",
                 "from": [
                     "industry_input",
                     "right"
                 ],
                 "to": [
-                    "industry_importer",
+                    "industry_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -595,9 +595,9 @@
                 }
             },
             {
-                "name": "from industry_importer to Industry_DB",
+                "name": "from industry_tool to Industry_DB",
                 "from": [
-                    "industry_importer",
+                    "industry_tool",
                     "right"
                 ],
                 "to": [
@@ -631,9 +631,9 @@
                 }
             },
             {
-                "name": "from transport_importer to Transport_DB",
+                "name": "from transport_tool to Transport_DB",
                 "from": [
-                    "transport_importer",
+                    "transport_tool",
                     "right"
                 ],
                 "to": [
@@ -703,13 +703,13 @@
                 }
             },
             {
-                "name": "from gas_input to gas_import",
+                "name": "from gas_input to gas_tool",
                 "from": [
                     "gas_input",
                     "right"
                 ],
                 "to": [
-                    "gas_import",
+                    "gas_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -721,9 +721,9 @@
                 }
             },
             {
-                "name": "from gas_import to Gas_DB",
+                "name": "from gas_tool to Gas_DB",
                 "from": [
-                    "gas_import",
+                    "gas_tool",
                     "right"
                 ],
                 "to": [
@@ -757,13 +757,13 @@
                 }
             },
             {
-                "name": "from Run_Investment to Investment_Results",
+                "name": "from Run_Investment to Invest_Result",
                 "from": [
                     "Run_Investment",
                     "right"
                 ],
                 "to": [
-                    "Investment_Results",
+                    "Invest_Result",
                     "left"
                 ],
                 "filter_settings": {
@@ -793,9 +793,9 @@
                 }
             },
             {
-                "name": "from Investment_Results to visualization",
+                "name": "from Invest_Result to visualization",
                 "from": [
-                    "Investment_Results",
+                    "Invest_Result",
                     "right"
                 ],
                 "to": [
@@ -811,13 +811,13 @@
                 }
             },
             {
-                "name": "from cargo_input to cargo_import",
+                "name": "from cargo_input to cargo_tool",
                 "from": [
                     "cargo_input",
                     "right"
                 ],
                 "to": [
-                    "cargo_import",
+                    "cargo_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -829,9 +829,9 @@
                 }
             },
             {
-                "name": "from cargo_import to Cargo_DB",
+                "name": "from cargo_tool to Cargo_DB",
                 "from": [
-                    "cargo_import",
+                    "cargo_tool",
                     "right"
                 ],
                 "to": [
@@ -865,13 +865,13 @@
                 }
             },
             {
-                "name": "from transport_input to transport_importer",
+                "name": "from transport_input to transport_tool",
                 "from": [
                     "transport_input",
                     "right"
                 ],
                 "to": [
-                    "transport_importer",
+                    "transport_tool",
                     "left"
                 ],
                 "filter_settings": {
@@ -1075,13 +1075,13 @@
                 }
             },
             {
-                "name": "from Run_Dispatch to Dispatch_Results",
+                "name": "from Run_Dispatch to Dispatch_Result",
                 "from": [
                     "Run_Dispatch",
                     "right"
                 ],
                 "to": [
-                    "Dispatch_Results",
+                    "Dispatch_Result",
                     "left"
                 ],
                 "filter_settings": {
@@ -1183,9 +1183,9 @@
                 }
             },
             {
-                "name": "from Investment_Results to fix_investments",
+                "name": "from Invest_Result to fix_investments",
                 "from": [
-                    "Investment_Results",
+                    "Invest_Result",
                     "right"
                 ],
                 "to": [
@@ -1201,13 +1201,13 @@
                 }
             },
             {
-                "name": "from Final_SpineOpt_Model to merge_operations",
+                "name": "from Final_SpineOpt_Model to merge_ops",
                 "from": [
                     "Final_SpineOpt_Model",
                     "right"
                 ],
                 "to": [
-                    "merge_operations",
+                    "merge_ops",
                     "left"
                 ],
                 "filter_settings": {
@@ -1219,9 +1219,9 @@
                 }
             },
             {
-                "name": "from merge_operations to Dispatch_Model",
+                "name": "from merge_ops to Dispatch_Model",
                 "from": [
-                    "merge_operations",
+                    "merge_ops",
                     "right"
                 ],
                 "to": [
@@ -1261,9 +1261,9 @@
                 }
             },
             {
-                "name": "from Dispatch_Results to feedback_extremes",
+                "name": "from Dispatch_Result to feedback_extremes",
                 "from": [
-                    "Dispatch_Results",
+                    "Dispatch_Result",
                     "bottom"
                 ],
                 "to": [
@@ -1321,8 +1321,8 @@
         "VRE_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -539.3855564141572,
-            "y": 245.96123103934667,
+            "x": -549.6570672474385,
+            "y": 218.57053548393037,
             "file_references": [
                 {
                     "type": "path",
@@ -1353,8 +1353,8 @@
         "VRE_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -256.55233599861987,
-            "y": 247.31833102982944,
+            "x": -266.82384683190094,
+            "y": 213.0799615855591,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1367,43 +1367,11 @@
                 "schema": ""
             }
         },
-        "VRE_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -396.9659915240641,
-            "y": 252.90473964234604,
-            "specification": "VRE_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@VRE_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/VRE/VRE_costs_EUR2025/VRE_costs.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/VRE/VRE_time_series"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/VRE/VRE_installed_capacities_2020_and_2025"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/VRE/VRE_greenfield_installation_potentials"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "biomass_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -558.700790454013,
-            "y": -123.50482396959805,
+            "x": -557.2706830911673,
+            "y": -127.7951460581355,
             "file_references": [
                 {
                     "type": "path",
@@ -1414,26 +1382,6 @@
             "file_patterns": [],
             "directory_references": [],
             "db_references": []
-        },
-        "biomass_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -410.4890129378094,
-            "y": -130.41934029018293,
-            "specification": "biomass_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Biomass_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_biomass/db_biomass_ener_mopo.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
         },
         "Biomass_DB": {
             "type": "Data Store",
@@ -1455,13 +1403,17 @@
         "Commodity_DB": {
             "type": "Data Store",
             "description": "",
-            "x": 17.038601498274446,
-            "y": -263.13462810950466,
+            "x": 10.890815118780441,
+            "y": -259.03610385650865,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "European-Data/Commodity/commodity_db.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -1485,8 +1437,8 @@
         "INES_inputs": {
             "type": "Data Connection",
             "description": "",
-            "x": 42.93488088184628,
-            "y": 277.88005380134354,
+            "x": 56.63022865955444,
+            "y": 276.16813532913,
             "file_references": [
                 {
                     "type": "path",
@@ -1524,39 +1476,11 @@
             "directory_references": [],
             "db_references": []
         },
-        "hydro_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -426.88727704360696,
-            "y": -411.8977251794212,
-            "specification": "hydro_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Hydro_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_hydro/hydro_parameters.xlsx"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_hydro/run-of-river_generation.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_hydro/inflow_reservoir.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "Hydro_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -288.0616939169543,
-            "y": -412.2990594952122,
+            "x": -273.7606202884961,
+            "y": -408.00873740667475,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1602,26 +1526,6 @@
             "directory_references": [],
             "db_references": []
         },
-        "transmission_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -414.05082644781834,
-            "y": -217.00266092727077,
-            "specification": "transmission_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Transmission_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_transmission/Electricity_Transmission.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "power_input": {
             "type": "Data Connection",
             "description": "",
@@ -1648,39 +1552,11 @@
             "directory_references": [],
             "db_references": []
         },
-        "power_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -418.642671382615,
-            "y": -318.62493019449937,
-            "specification": "power_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Power_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_power/existing_units_PECD1.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_power/light_tech_catalogue.xlsx"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_power/existing_parameters.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "Power_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -282.53422506558996,
-            "y": -335.33958085701,
+            "x": -272.5234735256693,
+            "y": -318.1782925028601,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1696,8 +1572,8 @@
         "RDemand_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -296.37139157456573,
-            "y": -511.57623416623494,
+            "x": -277.77999585757016,
+            "y": -497.27516053777674,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1710,31 +1586,11 @@
                 "schema": ""
             }
         },
-        "rdemand_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -427.1444937446486,
-            "y": -509.61113357776105,
-            "specification": "rdemand_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@RDemand_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Rdemand/other_electricity_demand.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "rdemand_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -553.9504919571082,
-            "y": -511.0693397852182,
+            "x": -558.2408140456455,
+            "y": -495.33815879391403,
             "file_references": [
                 {
                     "type": "path",
@@ -1749,8 +1605,8 @@
         "heat_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -540.7254739366476,
-            "y": 335.03017975795683,
+            "x": -547.5731478255017,
+            "y": 307.6394842025405,
             "file_references": [
                 {
                     "type": "path",
@@ -1791,8 +1647,8 @@
         "Heat_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -255.5938905324644,
-            "y": 339.9903272375267,
+            "x": -267.577319837959,
+            "y": 302.32812084882914,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1805,51 +1661,11 @@
                 "schema": ""
             }
         },
-        "heat_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -399.84837895008167,
-            "y": 340.8128462447793,
-            "specification": "heat_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Heat_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Buildings/heat_technology_params.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Buildings/heat_storage_params.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Buildings/simplified_capacities_with_decommissioning_MW.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Buildings/scenario_total_yearly_demands_GWh.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Buildings/cop-timeseries"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Buildings/demand-timeseries"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "Industry_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -255.3807789250465,
-            "y": 439.61853942733967,
+            "x": -265.6522897583277,
+            "y": 393.39674067757454,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1862,31 +1678,11 @@
                 "schema": ""
             }
         },
-        "industry_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -397.1414948503944,
-            "y": 441.76060880047487,
-            "specification": "industry_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Industry_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_industry-aidres/technology_catalogue_ind_nuts1_nuts3.xlsx"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "industry_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -539.6555499163007,
-            "y": 440.3975010035052,
+            "x": -549.9270607495819,
+            "y": 394.1757022537401,
             "file_references": [
                 {
                     "type": "path",
@@ -1901,8 +1697,8 @@
         "Transport_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -268.8088058078154,
-            "y": -36.48766369829292,
+            "x": -270.23891317066125,
+            "y": -46.49841523821365,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1914,34 +1710,6 @@
                 },
                 "schema": ""
             }
-        },
-        "transport_importer": {
-            "type": "Tool",
-            "description": "",
-            "x": -410.63335445374133,
-            "y": -32.350775495575874,
-            "specification": "transport_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Transport_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Transport/road"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Transport/non-road"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/European-Data/Transport/fleets_per_scenario.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
         },
         "SpineOpt_target": {
             "type": "Data Store",
@@ -1979,8 +1747,8 @@
         "Gas_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -261.58128759648304,
-            "y": 59.195825586759156,
+            "x": -268.7318244107121,
+            "y": 42.034537232609324,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1996,8 +1764,8 @@
         "gas_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -544.2325039251209,
-            "y": 61.81027087345382,
+            "x": -551.38304073935,
+            "y": 44.648982519303985,
             "file_references": [
                 {
                     "type": "path",
@@ -2013,43 +1781,6 @@
             "file_patterns": [],
             "directory_references": [],
             "db_references": []
-        },
-        "gas_import": {
-            "type": "Tool",
-            "description": "",
-            "x": -417.06154271449014,
-            "y": 58.919562263123794,
-            "specification": "gas_import",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Gas_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_gas/Gas_Sectors_Dataset.xlsx"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/EU_historical_inflation_ECB.csv"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
-        "Investment_Results": {
-            "type": "Data Store",
-            "description": "",
-            "x": 1063.9066024028607,
-            "y": -32.09661519265896,
-            "url": {
-                "dialect": "sqlite",
-                "host": "",
-                "port": null,
-                "database": "",
-                "schema": ""
-            }
         },
         "clustering_input": {
             "type": "Tool",
@@ -2117,8 +1848,8 @@
         "cargo_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -544.255586720617,
-            "y": 161.11644697246237,
+            "x": -551.4061235348461,
+            "y": 131.08419235270017,
             "file_references": [
                 {
                     "type": "path",
@@ -2135,35 +1866,11 @@
             "directory_references": [],
             "db_references": []
         },
-        "cargo_import": {
-            "type": "Tool",
-            "description": "",
-            "x": -415.6916565849181,
-            "y": 156.85790405687897,
-            "specification": "cargo_importer",
-            "execute_in_work": false,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@Cargo_DB"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_cargo-transport/cargo_network.csv"
-                },
-                {
-                    "type": "resource",
-                    "arg": "<project>/data-pipelines/europe/_cargo-transport/cargo_config.yml"
-                }
-            ],
-            "kill_completed_processes": false,
-            "log_process_output": false
-        },
         "Cargo_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -257.77746795487116,
-            "y": 153.5605700147006,
+            "x": -267.788219494792,
+            "y": 127.81863748347587,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -2179,8 +1886,8 @@
         "transport_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -548.8317799335045,
-            "y": -31.67222758372185,
+            "x": -550.2618872963503,
+            "y": -41.68297912364258,
             "file_references": [
                 {
                     "type": "path",
@@ -2246,19 +1953,6 @@
             ],
             "kill_completed_processes": false,
             "log_process_output": false
-        },
-        "Dispatch_Results": {
-            "type": "Data Store",
-            "description": "",
-            "x": 1558.0382221504524,
-            "y": -37.11523567787842,
-            "url": {
-                "dialect": "sqlite",
-                "host": "",
-                "port": null,
-                "database": "",
-                "schema": ""
-            }
         },
         "fix_investments": {
             "type": "Tool",
@@ -2331,13 +2025,6 @@
             ],
             "kill_completed_processes": false,
             "log_process_output": false
-        },
-        "merge_operations": {
-            "type": "Merger",
-            "description": "",
-            "x": 1058.9160080752054,
-            "y": -177.95362525098557,
-            "cancel_on_error": false
         },
         "feedback_extremes": {
             "type": "Tool",
@@ -2479,6 +2166,323 @@
             ],
             "kill_completed_processes": false,
             "log_process_output": false
+        },
+        "rdemand_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -419.9939569304196,
+            "y": -495.3100599493028,
+            "specification": "rdemand_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@RDemand_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Rdemand/other_electricity_demand.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "hydro_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -416.8765255036862,
+            "y": -407.6074030908837,
+            "specification": "hydro_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Hydro_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_hydro/hydro_parameters.xlsx"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_hydro/run-of-river_generation.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_hydro/inflow_reservoir.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "power_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -414.35234929407756,
+            "y": -318.6249301944993,
+            "specification": "power_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Power_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_power/existing_units_PECD1.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_power/light_tech_catalogue.xlsx"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_power/existing_parameters.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "transmission_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -414.05082644781834,
+            "y": -217.00266092727077,
+            "specification": "transmission_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transmission_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_transmission/Electricity_Transmission.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "biomass_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -410.4890129378094,
+            "y": -130.41934029018293,
+            "specification": "biomass_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Biomass_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_biomass/db_biomass_ener_mopo.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "transport_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -412.06346181658716,
+            "y": -42.36152703549661,
+            "specification": "transport_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Transport_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Transport/road"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Transport/non-road"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Transport/fleets_per_scenario.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "gas_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -411.3411132631068,
+            "y": 40.32816654612814,
+            "specification": "gas_import",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Gas_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_gas/Gas_Sectors_Dataset.xlsx"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/EU_historical_inflation_ECB.csv"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "cargo_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -411.4013344963807,
+            "y": 129.68586416280846,
+            "specification": "cargo_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Cargo_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_cargo-transport/cargo_network.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_cargo-transport/cargo_config.yml"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "VRE_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -407.2375023573452,
+            "y": 218.6663701980757,
+            "specification": "VRE_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@VRE_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_costs_EUR2025/VRE_costs.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_time_series"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_installed_capacities_2020_and_2025"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/VRE/VRE_greenfield_installation_potentials"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "heat_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -406.6960528389357,
+            "y": 304.8625583282953,
+            "specification": "heat_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Heat_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/heat_technology_params.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/heat_storage_params.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/simplified_capacities_with_decommissioning_MW.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/scenario_total_yearly_demands_GWh.csv"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/cop-timeseries"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/European-Data/Buildings/demand-timeseries"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "industry_tool": {
+            "type": "Tool",
+            "description": "",
+            "x": -407.41300568367546,
+            "y": 395.53881005070974,
+            "specification": "industry_importer",
+            "execute_in_work": false,
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@Industry_DB"
+                },
+                {
+                    "type": "resource",
+                    "arg": "<project>/data-pipelines/europe/_industry-aidres/technology_catalogue_ind_nuts1_nuts3.xlsx"
+                }
+            ],
+            "kill_completed_processes": false,
+            "log_process_output": false
+        },
+        "Dispatch_Result": {
+            "type": "Data Store",
+            "description": "",
+            "x": 1558.0382221504524,
+            "y": -37.11523567787842,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "Invest_Result": {
+            "type": "Data Store",
+            "description": "",
+            "x": 1063.9066024028607,
+            "y": -32.09661519265896,
+            "url": {
+                "dialect": "sqlite",
+                "host": "",
+                "port": null,
+                "database": "",
+                "schema": ""
+            }
+        },
+        "merge_ops": {
+            "type": "Merger",
+            "description": "",
+            "x": 1058.9160080752054,
+            "y": -177.95362525098557,
+            "cancel_on_error": false
         }
     }
 }

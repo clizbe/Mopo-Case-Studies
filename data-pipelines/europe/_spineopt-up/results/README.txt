@@ -1,0 +1,1 @@
+This folder will receive exported results when running the European case workflow.

@@ -4,3 +4,4 @@ The sub-folders should include:
 - Rdemand
 - Transport
 - VRE
+- Commodity
