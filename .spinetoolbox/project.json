@@ -117,6 +117,11 @@
                     "type": "path",
                     "relative": true,
                     "path": ".spinetoolbox/specifications/Tool/feedback_extremes.json"
+                },
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": "../../.spinetoolbox/plugins/SpineOpt/specifications/Tool/load_template.json"
                 }
             ]
         },
@@ -1015,48 +1020,6 @@
                 }
             },
             {
-                "name": "from template_1 to SpineOpt_target",
-                "from": [
-                    "template_1",
-                    "bottom"
-                ],
-                "to": [
-                    "SpineOpt_target",
-                    "left"
-                ],
-                "options": {
-                    "purge_before_writing": true,
-                    "purge_settings": {
-                        "alternative": true,
-                        "scenario": true,
-                        "scenario_alternative": true,
-                        "entity_class": true,
-                        "display_mode": true,
-                        "entity_class_display_mode": true,
-                        "superclass_subclass": true,
-                        "entity": true,
-                        "entity_group": true,
-                        "entity_alternative": true,
-                        "parameter_value_list": true,
-                        "list_value": true,
-                        "parameter_definition": true,
-                        "parameter_type": true,
-                        "parameter_value": true,
-                        "metadata": true,
-                        "entity_metadata": true,
-                        "parameter_value_metadata": true,
-                        "entity_location": true
-                    }
-                },
-                "filter_settings": {
-                    "auto_online": true,
-                    "enabled_filter_types": {
-                        "alternative_filter": false,
-                        "scenario_filter": true
-                    }
-                }
-            },
-            {
                 "name": "from Dispatch_Model to Run_Dispatch",
                 "from": [
                     "Dispatch_Model",
@@ -1304,6 +1267,24 @@
                 ],
                 "to": [
                     "feedback_extremes",
+                    "left"
+                ],
+                "filter_settings": {
+                    "auto_online": true,
+                    "enabled_filter_types": {
+                        "alternative_filter": false,
+                        "scenario_filter": true
+                    }
+                }
+            },
+            {
+                "name": "from SpineOpt_Template to SpineOpt_target",
+                "from": [
+                    "SpineOpt_Template",
+                    "right"
+                ],
+                "to": [
+                    "SpineOpt_target",
                     "left"
                 ],
                 "filter_settings": {
@@ -1728,22 +1709,6 @@
                 "schema": ""
             }
         },
-        "template_1": {
-            "type": "Tool",
-            "description": "",
-            "x": 443.65587154602207,
-            "y": -161.4625275834705,
-            "specification": "",
-            "execute_in_work": true,
-            "cmd_line_args": [
-                {
-                    "type": "resource",
-                    "arg": "db_url@SpineOpt_target"
-                }
-            ],
-            "kill_completed_processes": true,
-            "log_process_output": false
-        },
         "Gas_DB": {
             "type": "Data Store",
             "description": "",
@@ -2051,7 +2016,7 @@
             "description": "",
             "x": 404.71402770228985,
             "y": -19.15407650425766,
-            "specification": "ines_to_spinetop",
+            "specification": "ines_to_spineopt",
             "execute_in_work": false,
             "cmd_line_args": [
                 {
@@ -2483,6 +2448,17 @@
             "x": 1058.9160080752054,
             "y": -177.95362525098557,
             "cancel_on_error": false
+        },
+        "SpineOpt_Template": {
+            "type": "Tool",
+            "description": "",
+            "x": 409.70003304669274,
+            "y": -171.45055730758338,
+            "specification": "Load template",
+            "execute_in_work": true,
+            "cmd_line_args": [],
+            "kill_completed_processes": false,
+            "log_process_output": false
         }
     }
 }
