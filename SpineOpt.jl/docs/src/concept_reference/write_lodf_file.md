@@ -1,1 +1,0 @@
-If this parameter value is set to `true`, a diagnostics file containing all the network line outage distributions factors in CSV format will be written to the current directory.
