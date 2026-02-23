@@ -117,11 +117,6 @@
                     "type": "path",
                     "relative": true,
                     "path": ".spinetoolbox/specifications/Tool/feedback_extremes.json"
-                },
-                {
-                    "type": "path",
-                    "relative": true,
-                    "path": "../../.spinetoolbox/plugins/SpineOpt/specifications/Tool/load_template.json"
                 }
             ]
         },
@@ -1302,8 +1297,8 @@
         "VRE_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -549.6570672474385,
-            "y": 218.57053548393037,
+            "x": -529.5036021398865,
+            "y": 209.40986952595225,
             "file_references": [
                 {
                     "type": "path",
@@ -1334,8 +1329,8 @@
         "VRE_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -266.82384683190094,
-            "y": 213.0799615855591,
+            "x": -246.67038172434906,
+            "y": 203.91929562758096,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1351,8 +1346,8 @@
         "biomass_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -557.2706830911673,
-            "y": -127.7951460581355,
+            "x": -537.1172179836154,
+            "y": -136.95581201611364,
             "file_references": [
                 {
                     "type": "path",
@@ -1367,8 +1362,8 @@
         "Biomass_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -269.05078061828937,
-            "y": -132.24031061470512,
+            "x": -248.89731551073749,
+            "y": -141.40097657268325,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1384,8 +1379,8 @@
         "Commodity_DB": {
             "type": "Data Store",
             "description": "",
-            "x": 10.890815118780441,
-            "y": -259.03610385650865,
+            "x": 31.04428022633232,
+            "y": -268.19676981448674,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1401,8 +1396,8 @@
         "INES_DB": {
             "type": "Data Store",
             "description": "",
-            "x": 256.7317705650375,
-            "y": -16.207897629392,
+            "x": 276.8852356725894,
+            "y": -25.368563587370126,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1418,8 +1413,8 @@
         "INES_inputs": {
             "type": "Data Connection",
             "description": "",
-            "x": 56.63022865955444,
-            "y": 276.16813532913,
+            "x": 76.78369376710631,
+            "y": 267.0074693711519,
             "file_references": [
                 {
                     "type": "path",
@@ -1434,8 +1429,8 @@
         "hydro_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -560.8701192305871,
-            "y": -406.13066454712214,
+            "x": -540.7166541230353,
+            "y": -415.29133050510023,
             "file_references": [
                 {
                     "type": "path",
@@ -1460,8 +1455,8 @@
         "Hydro_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -273.7606202884961,
-            "y": -408.00873740667475,
+            "x": -253.60715518094423,
+            "y": -417.16940336465285,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1477,8 +1472,8 @@
         "Transmission_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -269.87221679122587,
-            "y": -215.31450490903728,
+            "x": -249.718751683674,
+            "y": -224.4751708670154,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1494,8 +1489,8 @@
         "transmission_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -561.9094590606735,
-            "y": -214.6448485447834,
+            "x": -541.7559939531217,
+            "y": -223.80551450276153,
             "file_references": [
                 {
                     "type": "path",
@@ -1510,8 +1505,8 @@
         "power_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -562.5422181227827,
-            "y": -318.11777770009655,
+            "x": -542.3887530152309,
+            "y": -327.27844365807465,
             "file_references": [
                 {
                     "type": "path",
@@ -1536,8 +1531,8 @@
         "Power_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -272.5234735256693,
-            "y": -318.1782925028601,
+            "x": -252.37000841811744,
+            "y": -327.3389584608382,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1553,8 +1548,8 @@
         "RDemand_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -277.77999585757016,
-            "y": -497.27516053777674,
+            "x": -257.6265307500183,
+            "y": -506.4358264957549,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1570,8 +1565,8 @@
         "rdemand_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -558.2408140456455,
-            "y": -495.33815879391403,
+            "x": -538.0873489380937,
+            "y": -504.4988247518921,
             "file_references": [
                 {
                     "type": "path",
@@ -1586,8 +1581,8 @@
         "heat_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -547.5731478255017,
-            "y": 307.6394842025405,
+            "x": -527.4196827179497,
+            "y": 298.4788182445623,
             "file_references": [
                 {
                     "type": "path",
@@ -1628,8 +1623,8 @@
         "Heat_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -267.577319837959,
-            "y": 302.32812084882914,
+            "x": -247.42385473040713,
+            "y": 293.16745489085105,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1645,8 +1640,8 @@
         "Industry_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -265.6522897583277,
-            "y": 393.39674067757454,
+            "x": -245.49882465077582,
+            "y": 384.2360747195964,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1662,8 +1657,8 @@
         "industry_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -549.9270607495819,
-            "y": 394.1757022537401,
+            "x": -529.77359564203,
+            "y": 385.01503629576194,
             "file_references": [
                 {
                     "type": "path",
@@ -1678,8 +1673,8 @@
         "Transport_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -270.23891317066125,
-            "y": -46.49841523821365,
+            "x": -250.08544806310937,
+            "y": -55.65908119619178,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1712,8 +1707,8 @@
         "Gas_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -268.7318244107121,
-            "y": 42.034537232609324,
+            "x": -248.5783593031602,
+            "y": 32.8738712746312,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1729,8 +1724,8 @@
         "gas_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -551.38304073935,
-            "y": 44.648982519303985,
+            "x": -531.2295756317982,
+            "y": 35.48831656132586,
             "file_references": [
                 {
                     "type": "path",
@@ -1777,8 +1772,8 @@
         "opt_setup": {
             "type": "Tool",
             "description": "",
-            "x": 421.00241228134985,
-            "y": 111.80496697234571,
+            "x": 404.2536240991738,
+            "y": 112.92155285115747,
             "specification": "opt_setup",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -1813,8 +1808,8 @@
         "cargo_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -551.4061235348461,
-            "y": 131.08419235270017,
+            "x": -531.2526584272943,
+            "y": 121.92352639472205,
             "file_references": [
                 {
                     "type": "path",
@@ -1834,8 +1829,8 @@
         "Cargo_DB": {
             "type": "Data Store",
             "description": "",
-            "x": -267.788219494792,
-            "y": 127.81863748347587,
+            "x": -247.6347543872401,
+            "y": 118.65797152549774,
             "url": {
                 "dialect": "sqlite",
                 "host": "",
@@ -1851,8 +1846,8 @@
         "transport_input": {
             "type": "Data Connection",
             "description": "",
-            "x": -550.2618872963503,
-            "y": -41.68297912364258,
+            "x": -530.1084221887985,
+            "y": -50.84364508162071,
             "file_references": [
                 {
                     "type": "path",
@@ -1878,8 +1873,8 @@
         "merge_spineopt": {
             "type": "Merger",
             "description": "",
-            "x": 671.5273030357471,
-            "y": -21.288575843674735,
+            "x": 684.9263335814879,
+            "y": -26.871505237733434,
             "cancel_on_error": false
         },
         "Final_SpineOpt_Model": {
@@ -2014,8 +2009,8 @@
         "ines_to_spineopt": {
             "type": "Tool",
             "description": "",
-            "x": 404.71402770228985,
-            "y": -19.15407650425766,
+            "x": 409.6072262536479,
+            "y": -24.047275055615714,
             "specification": "ines_to_spineopt",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2067,8 +2062,8 @@
         "INES_builder": {
             "type": "Tool",
             "description": "",
-            "x": 111.03809759610272,
-            "y": -16.826264543962566,
+            "x": 131.1915627036546,
+            "y": -25.98693050194069,
             "specification": "ines_builder",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2135,8 +2130,8 @@
         "rdemand_tool": {
             "type": "Tool",
             "description": "",
-            "x": -419.9939569304196,
-            "y": -495.3100599493028,
+            "x": -399.84049182286765,
+            "y": -504.47072590728095,
             "specification": "rdemand_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2155,8 +2150,8 @@
         "hydro_tool": {
             "type": "Tool",
             "description": "",
-            "x": -416.8765255036862,
-            "y": -407.6074030908837,
+            "x": -396.7230603961343,
+            "y": -416.76806904886183,
             "specification": "hydro_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2183,8 +2178,8 @@
         "power_tool": {
             "type": "Tool",
             "description": "",
-            "x": -414.35234929407756,
-            "y": -318.6249301944993,
+            "x": -394.1988841865257,
+            "y": -327.78559615247747,
             "specification": "power_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2211,8 +2206,8 @@
         "transmission_tool": {
             "type": "Tool",
             "description": "",
-            "x": -414.05082644781834,
-            "y": -217.00266092727077,
+            "x": -393.89736134026646,
+            "y": -226.1633268852489,
             "specification": "transmission_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2231,8 +2226,8 @@
         "biomass_tool": {
             "type": "Tool",
             "description": "",
-            "x": -410.4890129378094,
-            "y": -130.41934029018293,
+            "x": -390.33554783025744,
+            "y": -139.58000624816106,
             "specification": "biomass_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2251,8 +2246,8 @@
         "transport_tool": {
             "type": "Tool",
             "description": "",
-            "x": -412.06346181658716,
-            "y": -42.36152703549661,
+            "x": -391.9099967090352,
+            "y": -51.52219299347473,
             "specification": "transport_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2279,8 +2274,8 @@
         "gas_tool": {
             "type": "Tool",
             "description": "",
-            "x": -411.3411132631068,
-            "y": 40.32816654612814,
+            "x": -391.18764815555494,
+            "y": 31.16750058815002,
             "specification": "gas_import",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2303,8 +2298,8 @@
         "cargo_tool": {
             "type": "Tool",
             "description": "",
-            "x": -411.4013344963807,
-            "y": 129.68586416280846,
+            "x": -391.2478693888288,
+            "y": 120.52519820483033,
             "specification": "cargo_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2327,8 +2322,8 @@
         "VRE_tool": {
             "type": "Tool",
             "description": "",
-            "x": -407.2375023573452,
-            "y": 218.6663701980757,
+            "x": -387.08403724979337,
+            "y": 209.50570424009757,
             "specification": "VRE_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2359,8 +2354,8 @@
         "heat_tool": {
             "type": "Tool",
             "description": "",
-            "x": -406.6960528389357,
-            "y": 304.8625583282953,
+            "x": -386.54258773138383,
+            "y": 295.7018923703171,
             "specification": "heat_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2399,8 +2394,8 @@
         "industry_tool": {
             "type": "Tool",
             "description": "",
-            "x": -407.41300568367546,
-            "y": 395.53881005070974,
+            "x": -387.25954057612364,
+            "y": 386.3781440927316,
             "specification": "industry_importer",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2452,8 +2447,8 @@
         "SpineOpt_Template": {
             "type": "Tool",
             "description": "",
-            "x": 409.70003304669274,
-            "y": -171.45055730758338,
+            "x": 406.3502754102576,
+            "y": -171.45055730758335,
             "specification": "Load template",
             "execute_in_work": true,
             "cmd_line_args": [],

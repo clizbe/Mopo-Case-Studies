@@ -1,6 +1,0 @@
-.vscode
-/docs/build/*
-**/logs/
-**/output/
-__pycache__/
-**.egg-info/
