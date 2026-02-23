@@ -1761,8 +1761,8 @@
         "run_clustering": {
             "type": "Tool",
             "description": "",
-            "x": 964.8626890714743,
-            "y": 189.59348920488065,
+            "x": 966.4117271017891,
+            "y": 189.59348920488068,
             "specification": "run_clustering",
             "execute_in_work": false,
             "cmd_line_args": [],
@@ -2010,7 +2010,7 @@
             "type": "Tool",
             "description": "",
             "x": 409.6072262536479,
-            "y": -24.047275055615714,
+            "y": -27.14535111624556,
             "specification": "ines_to_spineopt",
             "execute_in_work": false,
             "cmd_line_args": [
@@ -2447,11 +2447,16 @@
         "SpineOpt_Template": {
             "type": "Tool",
             "description": "",
-            "x": 406.3502754102576,
+            "x": 409.4483514708875,
             "y": -171.45055730758335,
             "specification": "Load template",
             "execute_in_work": true,
-            "cmd_line_args": [],
+            "cmd_line_args": [
+                {
+                    "type": "resource",
+                    "arg": "db_url@SpineOpt_target"
+                }
+            ],
             "kill_completed_processes": false,
             "log_process_output": false
         }

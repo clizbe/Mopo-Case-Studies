@@ -7,7 +7,7 @@ using CSV
 
 println("WARNING: Check whether there are extreme periods from the loop with the operational assessments")
 
-number_of_representatives = 12
+number_of_representatives = 2
 number_of_timesteps = 24
 
 function get_data(input_folder,year)
@@ -67,7 +67,7 @@ for alternative in ["wy2009"]
       learning_rate = 1e-3
     )
 
-    println("Writting Results")
+    println("Writing Results")
     weights = TulipaClustering.weight_matrix_to_df(clustering_result.weight_matrix)
     CSV.write(string("results/weights","_",alternative,".csv"),weights)
     
