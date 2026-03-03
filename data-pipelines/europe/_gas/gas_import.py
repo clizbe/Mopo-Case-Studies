@@ -64,19 +64,19 @@ def tech_production(target_db,sheet):
         currency = row.iloc[12]
         add_parameter_value(target_db,"technology__to_commodity","capacity","Base",(tech,to_node),1.0)
         if pd.notna(currency):
-            inflation_factor = math.prod([1+value_*1e-2 for value_ in inflation.loc[currency+1:,"HICP"].tolist()])
+            inflation_factor = math.prod([1+value_*1e-2 for value_ in inflation.loc[int(currency.replace(",",""))+1:,"HICP"].tolist()])
             print(tech, currency, inflation_factor)
         if pd.notna(row.iloc[2]):
-            map_inv  = {"type":"map","index_type":"str","index_name":"period","data":{"y2030":1e6*inflation_factor*row.iloc[2],"y2040":1e6*inflation_factor*row.iloc[3],"y2050":1e6*inflation_factor*row.iloc[4]}}
+            map_inv  = {"type":"map","index_type":"str","index_name":"period","data":{"y2030":1e6*inflation_factor*float(str(row.iloc[2]).replace(",","")),"y2040":1e6*inflation_factor*float(str(row.iloc[3]).replace(",","")),"y2050":1e6*inflation_factor*float(str(row.iloc[4]).replace(",",""))}}
             add_parameter_value(target_db,"technology__to_commodity","investment_cost","Base",(tech,to_node),map_inv)
         if pd.notna(row.iloc[5]):
-            map_fom  = {"type":"map","index_type":"str","index_name":"period","data":{"y2030":inflation_factor*row.iloc[5],"y2040":inflation_factor*row.iloc[6],"y2050":inflation_factor*row.iloc[7]}}
+            map_fom  = {"type":"map","index_type":"str","index_name":"period","data":{"y2030":inflation_factor*float(str(row.iloc[5]).replace(",","")),"y2040":inflation_factor*float(str(row.iloc[6]).replace(",","")),"y2050":inflation_factor*float(str(row.iloc[7]).replace(",",""))}}
             add_parameter_value(target_db,"technology__to_commodity","fixed_cost","Base",(tech,to_node),map_fom)
         if pd.notna(row.iloc[8]):
-            map_vom  = {"type":"map","index_type":"str","index_name":"period","data":{"y2030":inflation_factor*row.iloc[8],"y2040":inflation_factor*row.iloc[9],"y2050":inflation_factor*row.iloc[10]}}
+            map_vom  = {"type":"map","index_type":"str","index_name":"period","data":{"y2030":inflation_factor*float(str(row.iloc[8]).replace(",","")),"y2040":inflation_factor*float(str(row.iloc[9]).replace(",","")),"y2050":inflation_factor*float(str(row.iloc[10]).replace(",",""))}}
             add_parameter_value(target_db,"technology__to_commodity","operational_cost","Base",(tech,to_node),map_vom)
         if pd.notna(row.iloc[11]):
-            add_parameter_value(target_db,"technology","lifetime","Base",(tech,),row.iloc[11])
+            add_parameter_value(target_db,"technology","lifetime","Base",(tech,),float(str(row.iloc[11]).replace(",","")))
     try:
         target_db.commit_session("tech production")
     except DBAPIError as e:

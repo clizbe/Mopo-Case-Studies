@@ -1795,7 +1795,7 @@
             "cmd_line_args": [
                 {
                     "type": "resource",
-                    "arg": "db_url@Investment_Results"
+                    "arg": "db_url@Invest_Result"
                 },
                 {
                     "type": "resource",
@@ -1924,11 +1924,11 @@
             "cmd_line_args": [
                 {
                     "type": "resource",
-                    "arg": "db_url@Investment_Results"
+                    "arg": "db_url@Dispatch_Model"
                 },
                 {
                     "type": "resource",
-                    "arg": "db_url@Operational_Model"
+                    "arg": "db_url@Invest_Result"
                 }
             ],
             "kill_completed_processes": false,
@@ -2035,7 +2035,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Dispatch_Model.sqlite"
+                },
                 "schema": ""
             }
         },
@@ -2044,7 +2048,7 @@
             "description": "",
             "x": 935.89753794699,
             "y": -33.192817045404674,
-            "specification": "",
+            "specification": "Run SpineOpt",
             "execute_in_work": true,
             "cmd_line_args": [
                 {
@@ -2053,7 +2057,7 @@
                 },
                 {
                     "type": "resource",
-                    "arg": "db_url@Investment_Results"
+                    "arg": "db_url@Invest_Result"
                 }
             ],
             "kill_completed_processes": false,
@@ -2433,7 +2437,11 @@
                 "dialect": "sqlite",
                 "host": "",
                 "port": null,
-                "database": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": "Intermediate-DBs/Invest_Result.sqlite"
+                },
                 "schema": ""
             }
         },
