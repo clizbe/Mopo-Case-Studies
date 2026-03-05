@@ -1,7 +1,6 @@
 .spinetoolbox/local
-European-Data/*/
-Industrial-Data/*/
-Intermediate-DBs/*.sqlite
+.spinetoolbox/items/**.sqlite
+Raw-Data/*/
 data-pipelines/europe/_visualization/files_out/*.csv
 data-pipelines/europe/_visualization/files_out/*.dill
 data-pipelines/europe/_spineopt-up/profiles/*.csv

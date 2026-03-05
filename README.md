@@ -5,12 +5,12 @@ The goal is to improve reproducibility and collaboration.
 
 # First Time Set Up Instructions
 
-First you need to install Julia with Juliaup. Juliaup is necessary for handling multiple versions of Julia and currently SpineOpt does not work with the most recent version of julia.
+ROUGH: First you need to install Julia with Juliaup. Juliaup is necessary for handling multiple versions of Julia and currently SpineOpt does not work with the most recent version of julia.
 
 TODO: Also Python installation?
 
 1. Clone this repository
-1. Download the data zipped folder from Zenodo > Right click > Extract All > Choose the European-Data folder
+1. Download the data zipped folder from Zenodo > Right click > Extract All > Choose the Raw-Data folder
 
 1. EITHER open the project in VSCode and open a powershell terminal 
 
@@ -37,20 +37,24 @@ TODO: Also Python installation?
 1. Set up julia dependencies in the project:
 
     `julia --project=. -e "using Pkg; Pkg.instantiate()"`
-    
-1. Close julia to return to powershell: `CTRL + D`
 
 1. Run spinetoolbox: `spinetoolbox`
 
 1. Open the project: *File > Open Project > Mopo-Case-Studies*
 
-1. Double-click on each Julia tool and set the Project to the project folder (this makes sure it sees the correct julia environment and packages)
+1. Double-click on each Julia tool and set the Project to the project folder 
 
-1. Double-click on each intermediate datastore > *New SpineDB* > Select the Intermediate-DBs folder
+    (This makes sure it sees the correct julia environment and packages)
+
+1. Double-click on each intermediate datastore (pink icons) > *New SpineDB > Okay* 
+    
+    (This will create sqlite files in the default folders SpineToolbox chooses.)
 
 TODO: Set to Consumer
 
-# Working Start-up
+TODO: Make sure tools use python env created above
+
+# TODO Working Start-up
 
 Once you've completed the first-time setup, this is how you can start-up when returning to work on the project.
 
@@ -59,6 +63,6 @@ Once you've completed the first-time setup, this is how you can start-up when re
 
 - Launch spinetoolbox
 - Tooling order
-- Rerunning & saved
+- Avoiding rerunning from raw
 - Scenario filters
 - Config files

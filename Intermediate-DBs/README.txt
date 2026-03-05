@@ -1,1 +1,0 @@
-Store all workflow DBs (pink icons) in this folder.
